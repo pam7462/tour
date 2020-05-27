@@ -35,20 +35,36 @@
 .pc_g11{width:91.52380952380952%;}
 .pc_g12{width:100%;}
 
-.clearfix::after{
-  content:'';
-  display:block;
-  clear:both;
+.clearfix::after{content:'';display:block;clear:both;}
+.float_left{float:left;}
+.float_right{float:right;}
+body{font-family: 'Noto Sans KR', sans-serif;}
+.skip{
+  position: fixed;left:0;top:0;z-index:10;
+  transform:translateY(-100%);width:100%;
+  padding:10px;text-align:center;
+  background-color:#dddddd;transition:0.2s;
 }
-.float_left{
-  float:left;
+.skip.active{
+  transform:translateY(0%);
 }
-.float_right{
-  float:right;
+.pos_fix{
+  position: fixed;
+  left:0;
+  bottom:0;
+  z-index:10;
+  width:100%;
 }
-body{
-  font-family: 'Noto Sans KR', sans-serif;
+.pos_fix>ul{
+  display:flex;
+  flex-flow:row nowrap;
 }
+.pos_fix>ul>li{
+  flex:1;
+  text-align:center;
+}
+
+
 
 
 
