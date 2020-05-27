@@ -1,1 +1,83 @@
 @charset 'utf-8';
+/* 구글폰트 노토산스KR */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* 기본스타일*/
+*{box-sizing:border-box;}
+.row{width:100%;}
+.content{width:95%;max-width:1050px;margin:0 auto;}
+.mo_g1{width:23.02631578947368%;}
+.mo_g2{width:48.68421052631579%;}
+.mo_g3{width:74.34210526315789%;}
+.mo_g4{width:100%;}
+.ta_g1{width:6.634146341463415%;}
+.ta_g2{width:15.1219512195122%;}
+.ta_g3{width:23.60975609756098%;}
+.ta_g4{width:32.09756097560976%;}
+.ta_g5{width:40.58536585365854%;}
+.ta_g6{width:49.07317073170732%;}
+.ta_g7{width:57.5609756097561%;}
+.ta_g8{width:66.04878048780488%;}
+.ta_g9{width:74.53658536585366%;}
+.ta_g10{width:83.02439024390244%;}
+.ta_g11{width:91.51219512195122%;}
+.ta_g12{width:100%;}
+.pc_g1{width:6.571428571428571%;}
+.pc_g2{width:15.04761904761905%;}
+.pc_g3{width:23.52380952380952%;}
+.pc_g4{width:32%;}
+.pc_g5{width:40.57142857142857%;}
+.pc_g6{width:49.04761904761905%;}
+.pc_g7{width:57.52380952380952%;}
+.pc_g8{width:66%;}
+.pc_g9{width:74.57142857142857%;}
+.pc_g10{width:83.04761904761905%;}
+.pc_g11{width:91.52380952380952%;}
+.pc_g12{width:100%;}
+
+.clearfix::after{
+  content:'';
+  display:block;
+  clear:both;
+}
+.float_left{
+  float:left;
+}
+.float_right{
+  float:right;
+}
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 테블릿 스타일 */
+@media (min-width:801px){
+  .content{
+    width:96.24413145539906%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* pc 스타일 */
+@media (min-width:1066px){
+
+}
