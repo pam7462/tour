@@ -157,10 +157,63 @@ header{
 .logo_box>a>img{
   width:100%;
 }
-
-
-.nav_box{display:none;}
-
+.nav_box{
+  position:absolute;
+  left:0;
+  top:100%;
+  z-index:10;
+  width:100%;
+  background-color:#282828;
+  display:none;
+}
+.nav_box a{color:#cccccc;font-size:1.2em;}
+.login_join{padding:20px 0;}
+.login_join>li{padding:0 20px;}
+.login_join>li:first-child{
+  border-right:1px solid #cccccc;
+}
+.main_nav{
+  border-top:1px solid #cccccc;
+  border-bottom:1px solid #cccccc;
+}
+.main_nav>li{
+  width:50%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_nav>li:nth-child(2n+1){
+  border-right:1px solid #cccccc;
+}
+.main_nav>li:nth-child(1),
+.main_nav>li:nth-child(2){
+  border-bottom:1px solid #cccccc;
+}
+.main_nav>li::before{
+  content:'';
+  display:inline-block;
+  width:60px;
+  height:70px;
+  margin-right:14px;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.main_nav>li:nth-child(1)::before{
+  background-image:url('../images/mo_icon01.png');
+}
+.main_nav>li:nth-child(2)::before{
+  background-image:url('../images/mo_icon02.png');
+}
+.main_nav>li:nth-child(3)::before{
+  background-image:url('../images/mo_icon03.png');
+}
+.main_nav>li:nth-child(4)::before{
+  background-image:url('../images/mo_icon04.png');
+}
+.sub_nav{
+  display:none;
+}
 
 
 
