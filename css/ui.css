@@ -195,6 +195,12 @@ header{
   background-image:url('../images/mo_icon04.png');
 }
 .sub_nav{display:none;}
+.slide_box{display:none;}
+
+.mo_slide_box img{
+  width:100%;
+}
+
 
 
 
@@ -272,6 +278,7 @@ header{
   .main_nav>li{
     width:25%;
     justify-content:flex-end;
+    padding-bottom:32px;
   }
   .main_nav>li::before{
     display:none;
@@ -279,6 +286,34 @@ header{
   .main_nav>li>a{
     font-size:1.4em;
   }
+  .sub_nav{
+    position: absolute;
+    left:0;
+    top:100%;
+    z-index:10;
+    width:100%;
+    background-color:rgba(255,0,0,0.5);
+  }
+  .main_nav>li:nth-child(1)>.sub_nav{
+    padding-left:55%;
+  }
+  .main_nav>li:nth-child(2)>.sub_nav{
+    padding-left:65%;
+  }
+  .main_nav>li:nth-child(3)>.sub_nav{
+    padding-left:73%;
+  }
+  .main_nav>li:nth-child(4)>.sub_nav{
+    padding-left:82%;
+  }
+  .sub_nav>li{
+    margin:16px;
+  }
+  .main_nav>li:hover>.sub_nav{
+    display:block;    
+  }
+  .slide_box{display:block;}
+  .mo_slide_box{display:none;}
   
 }
 

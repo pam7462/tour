@@ -1,5 +1,5 @@
 $(function(){
-  
+
   fnKakao();
   fnmainNav();
 
@@ -42,4 +42,8 @@ $(function(){
     }
   }  
   
+  // 베너 슬라이더
+  var mySwiper = new Swiper('.swiper-container', {
+    speed: 400,
+  });
 })
