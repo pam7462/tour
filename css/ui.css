@@ -189,5 +189,51 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 
 /* pc 스타일 */
 @media (min-width:1066px){
-
+  .pos_fix{
+    position: fixed;
+    right:0;
+    bottom:50%;
+    z-index:10;
+    transform:translateY(50%);
+  }
+  .pos_fix>ul{
+    display:block;
+    width:94px;
+    padding:0;
+    position: static;
+    background-color:#282828;
+  }
+  .pos_fix>ul>li{
+    width:100% !important;
+    border-bottom:1px solid #cccccc;
+    padding:16px 0;
+    flex-flow:column nowrap;
+  }
+  .pos_fix>ul>li::before{
+    display:none;
+  }
+  .pos_fix>ul>li::after{
+    display:block;
+    color:#cccccc;
+    font-size:0.8em;
+  }
+  .pos_fix>ul>li:nth-child(1)::after{
+    content:'010-1234-5678';
+  }  
+  .pos_fix>ul>li:nth-child(2)::after{
+    content:'1:1 상담';
+  }
+  .pos_fix>p{
+    position:static;
+    width:auto;
+    height:auto;
+    border:1px solid #282828;
+    border-radius:0;
+    padding:10px 0;
+    background-color:#ffffff;
+  }
+  .pos_fix>p::before,
+  .pos_fix>p>a{
+    color:#282828;
+  }
 }
