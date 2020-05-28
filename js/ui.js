@@ -1,4 +1,8 @@
 $(function(){
+  
+  fnKakao();
+  fnmainNav();
+
   // 스킵메뉴
   $('.skip>a').focus(function(){
     $('.skip').addClass('active');
@@ -7,14 +11,13 @@ $(function(){
     $('.skip').removeClass('active');
   });
 
-  // 1066px 이상에서의 pos_fix 카카오톡 변경
+  // 화면폭에 따른 카카오톡 / 메인네비 변경 이벤트  
   $(window).resize(function(){
     fnKakao();
     fnmainNav();
-  });
+  });  
 
-  fnKakao();
-
+  // 해상도에 따른 pos_fix 카카오톡 변경 함수
   function fnKakao(){
     var winWidth=$(this).width();
     if(winWidth>=1066){
@@ -24,12 +27,12 @@ $(function(){
     }
   }
 
-  // 헤더 토글 네비게이션
+  // 모바일에서 메인네비 호출 이벤트
   $('.tgl_btn').click(function(){
     $('.nav_box').slideToggle(300);
   });
 
-  // 메인 네비 보이고 안보이고
+  // 메인 네비 보이고 안보이고 함수
   function fnmainNav(){
     var winWidth=$(window).width();
     if(winWidth>=801){
@@ -37,7 +40,6 @@ $(function(){
     }else{
       $('.nav_box').hide();
     }
-  }
-  fnmainNav();
+  }  
   
 })
