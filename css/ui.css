@@ -48,20 +48,48 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .skip.active{
   transform:translateY(0%);
 }
-.pos_fix{
+.pos_fix>ul{
   position: fixed;
   left:0;
   bottom:0;
   z-index:10;
   width:100%;
-}
-.pos_fix>ul{
-  display:flex;
-  flex-flow:row nowrap;
+  padding:14px;
+  background-color:#3a3e46;
 }
 .pos_fix>ul>li{
-  flex:1;
+  width:33.33333333333333%;
   text-align:center;
+  border-right:1px solid #999999;
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:center;
+}
+.pos_fix>ul>li:last-child{
+  border:none;
+}
+.pos_fix>ul>li>a{
+  color:#cccccc;
+  font-size:1.2em;
+}
+.pos_fix>ul>li::before{
+  content:'';
+  display:inline-block;
+  width:24px;
+  height:24px;
+  margin-right:16px;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:contain;
+}
+.pos_fix>ul>li:nth-child(1)::before{
+  background-image:url('../images/mo_icon05.png');
+}
+.pos_fix>ul>li:nth-child(2)::before{
+  background-image:url('../images/mo_icon06.png');
+}
+.pos_fix>ul>li:nth-child(3)::before{
+  background-image:url('../images/mo_icon07.png');
 }
 
 
