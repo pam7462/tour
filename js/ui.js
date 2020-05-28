@@ -10,6 +10,7 @@ $(function(){
   // 1066px 이상에서의 pos_fix 카카오톡 변경
   $(window).resize(function(){
     fnKakao();
+    fnmainNav();
   });
 
   fnKakao();
@@ -27,4 +28,16 @@ $(function(){
   $('.tgl_btn').click(function(){
     $('.nav_box').slideToggle(300);
   });
+
+  // 메인 네비 보이고 안보이고
+  function fnmainNav(){
+    var winWidth=$(window).width();
+    if(winWidth>=801){
+      $('.nav_box').show();
+    }else{
+      $('.nav_box').hide();
+    }
+  }
+  fnmainNav();
+  
 })
