@@ -145,6 +145,19 @@ header{
   background-color:#ffffff;
   text-indent:-999999px;
 }
+.logo_box{
+  width:calc(100% - 25px);
+  text-align:center;
+  padding-top:36px;
+}
+.logo_box>a{
+  display:inline-block;
+  width:178px;
+}
+.logo_box>a>img{
+  width:100%;
+}
+
 
 .nav_box{display:none;}
 
@@ -201,6 +214,17 @@ header{
   }
   .pos_fix>ul{
     display:none;
+  }
+  .tgl_btn{
+    display:none;
+  }
+  .logo_box{
+    width:40%;
+    text-align:left;
+    padding-top:30px;
+  }
+  .logo_box>a{
+    width:262px;
   }
 }
 
