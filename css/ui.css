@@ -54,30 +54,33 @@ body{font-family: 'Noto Sans KR', sans-serif;}
   bottom:0;
   z-index:10;
   width:100%;
-  padding:14px;
+  padding:14px 0;
   background-color:#3a3e46;
 }
 .pos_fix>ul>li{
-  width:33.33333333333333%;
-  text-align:center;
+  width:30%;
   border-right:1px solid #999999;
   display:flex;
   flex-flow:row nowrap;
   justify-content:center;
+  align-items:center;
+}
+.pos_fix>ul>li:nth-child(2){
+  width:40%;
 }
 .pos_fix>ul>li:last-child{
   border:none;
 }
 .pos_fix>ul>li>a{
   color:#cccccc;
-  font-size:1.2em;
+  font-size:1em;
 }
 .pos_fix>ul>li::before{
   content:'';
   display:inline-block;
-  width:24px;
-  height:24px;
-  margin-right:16px;
+  width:16px;
+  height:16px;
+  margin-right:10px;
   background-repeat:no-repeat;
   background-position:center;
   background-size:contain;
@@ -90,6 +93,66 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 }
 .pos_fix>ul>li:nth-child(3)::before{
   background-image:url('../images/mo_icon07.png');
+}
+.pos_fix>p{
+  position: fixed;
+  right:20px;
+  bottom:100px;
+  z-index:10;
+  width:44px;
+  height:44px;
+  border:1px solid #ffffff;
+  border-radius:50%;
+  background-color:#000000;
+  display:flex;
+  flex-flow:column nowrap;
+  justify-content:center;
+  align-items: center;
+  opacity:0.5;
+}
+.pos_fix>p::before{
+  content:'^';
+  display:block;
+  height:10px;
+  color:#ffffff;
+  font-size:1.8em;
+  line-height:16px;
+}
+.pos_fix>p>a{
+  color:#ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:640px){
+  .pos_fix>ul>li{
+    width:33.33333333333333% !important;
+  }
+  .pos_fix>ul>li::before{
+    width:24px;
+    height:24px;
+    margin-right:16px;
+  }
+  .pos_fix>ul>li>a{
+    font-size:1.2em;
+  }
 }
 
 
@@ -109,6 +172,9 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 @media (min-width:801px){
   .content{
     width:96.24413145539906%;
+  }
+  .pos_fix>ul{
+    display:none;
   }
 }
 
