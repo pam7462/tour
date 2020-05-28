@@ -22,4 +22,9 @@ $(function(){
       $('#kakao').text('카카오톡 상담');
     }
   }
+
+  // 헤더 토글 네비게이션
+  $('.tgl_btn').click(function(){
+    $('.nav_box').slideToggle(300);
+  });
 })

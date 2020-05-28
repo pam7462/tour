@@ -121,6 +121,32 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .pos_fix>p>a{
   color:#ffffff;
 }
+header{
+  background-color:rgba(0,0,0,0.2);
+  position:relative;
+  width:100%;
+  height:90px;
+}
+.tgl_btn{
+  cursor:pointer;
+  padding-top:36px;
+}
+.tgl_btn::before,.tgl_btn::after{
+  content:'';
+  display:block;
+  width:25px;
+  height:3px;
+  background-color:#ffffff;
+}
+.tgl_btn>p{
+  width:17px;
+  height:3px;
+  margin:4px 0;
+  background-color:#ffffff;
+  text-indent:-999999px;
+}
+
+.nav_box{display:none;}
 
 
 
