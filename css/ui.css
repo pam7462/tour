@@ -114,7 +114,10 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .pos_fix>p>a{color:#ffffff;}
 header{
   background-color:rgba(0,0,0,0.2);
-  position:relative;
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:10;
   width:100%;
   height:90px;
 }
@@ -195,10 +198,72 @@ header{
   background-image:url('../images/mo_icon04.png');
 }
 .sub_nav{display:none;}
-.slide_box{display:none;}
 
 .mo_slide_box img{
   width:100%;
+  cursor:pointer;
+}
+.mo_banner .swiper-pagination{
+  padding-right:20px;
+  padding-bottom:20px;
+  text-align:right;
+}
+.swiper-pagination-bullet{
+  background-color:#ffffff;
+}
+.tab_banner{display:none;}
+.tab_slide_box{
+  position: relative;
+  height:550px;
+  overflow: hidden;
+}
+.tab_slide_img>img,
+.tab_slide_txt_img,
+.tab_slide_over_txt{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+}
+.tab_slide_img>img{
+  width:130%;
+}
+.tab_slide_over_txt{
+  top:80%;
+  width:100%;
+}
+.tab_slide_over_txt>p{
+  font-weight:200;
+  font-size:1.8em;
+  text-align:center;
+  color:#eeeeee;
+  letter-spacing:0.3em;
+}
+.tab_banner .swiper-pagination{
+  padding-bottom:20px;
+}
+.tab_banner .swiper-pagination-bullet{
+  width:14px;
+  height:14px;
+  border-radius:7px;
+  transition:0.5s;
+}
+.tab_banner .swiper-pagination-bullet-active{
+  width:42px;
+}
+.tab_banner .swiper-pagination::before{
+  content:'';
+  display:inline-block;
+  width:14px;
+  height:14px;
+  background-color:red;
+}
+.tab_banner .swiper-pagination::after{
+  content:'';
+  display:inline-block;
+  width:14px;
+  height:14px;
+  background-color:green;
 }
 
 
@@ -275,8 +340,12 @@ header{
   .login_join>li>a{
     font-size:1em;
   }
+  .main_nav{
+    border:none;
+  }
   .main_nav>li{
     width:25%;
+    border:none !important;
     justify-content:flex-end;
     padding-bottom:32px;
   }
@@ -312,9 +381,8 @@ header{
   .main_nav>li:hover>.sub_nav{
     display:block;    
   }
-  .slide_box{display:block;}
-  .mo_slide_box{display:none;}
-  
+  .mo_banner{display:none;}
+  .tab_banner{display:block;}
 }
 
 

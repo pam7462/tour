@@ -43,7 +43,15 @@ $(function(){
   }  
   
   // 베너 슬라이더
-  var mySwiper = new Swiper('.swiper-container', {
+  var mySwiper = new Swiper('.mo_banner,.tab_banner', {
     speed: 400,
+    loop:true,
+    autoplay:{
+      delay:3000,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
   });
 })
