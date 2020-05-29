@@ -10,22 +10,10 @@
 .mo_g2{width:48.68421052631579%;}
 .mo_g3{width:74.34210526315789%;}
 .mo_g4{width:100%;}
-.ta_g1{width:6.634146341463415%;}
-.ta_g2{width:15.1219512195122%;}
-.ta_g3{width:23.60975609756098%;}
-.ta_g4{width:32.09756097560976%;}
-.ta_g5{width:40.58536585365854%;}
-.ta_g6{width:49.07317073170732%;}
-.ta_g7{width:57.5609756097561%;}
-.ta_g8{width:66.04878048780488%;}
-.ta_g9{width:74.53658536585366%;}
-.ta_g10{width:83.02439024390244%;}
-.ta_g11{width:91.51219512195122%;}
-.ta_g12{width:100%;}
 .pc_g1{width:6.571428571428571%;}
 .pc_g2{width:15.04761904761905%;}
 .pc_g3{width:23.52380952380952%;}
-.pc_g4{width:32%;}
+.pc_g4{width:32% !important;}
 .pc_g5{width:40.57142857142857%;}
 .pc_g6{width:49.04761904761905%;}
 .pc_g7{width:57.52380952380952%;}
@@ -97,12 +85,11 @@ body{font-family: 'Noto Sans KR', sans-serif;}
   border:1px solid #ffffff;
   border-radius:50%;
   background-color:#000000;
-  display:flex;
+  display:none;
   flex-flow:column nowrap;
   justify-content:center;
   align-items: center;
-  opacity:0;
-  transition:0.2s;
+  opacity:0.5;
 }
 .pos_fix>p::before{
   content:'^';
@@ -259,11 +246,92 @@ header{
   background-size:cover;
   cursor: pointer;
 }
-
-
-
-
-
+.topplace h2{
+  height:102px;
+  padding:22px 0;
+  font-size:1.6em;
+  text-align:center;
+}
+.topplace h2 span{font-size:1em;display:block;}
+.top3>li{width:100%;}
+.top3>li>img{width:100%;}
+.top3>li>h3{
+  padding-top:16px;
+  font-size:1.4em;
+  text-align:center;
+}
+.top3>li>p{
+  text-align:center;
+}
+.top3>li>p>a{
+  display:inline-block;
+  margin:20px 0;
+  border-top:1px solid #000000;
+  padding-top:6px;
+  font-size:1.2em;
+}
+.notice_box>li:first-child{
+  height:250px;
+  background:url('../images/cons_img.jpg') no-repeat center;
+  background-size:cover;
+  display:none;
+  justify-content:center;
+  align-items: center;
+}
+.kakao_box,.tel_box{
+  width:40%;
+  border:2px solid #ffffff;
+  padding:10px 0;
+  background-color:rgba(0,0,0,0.3);
+  display:flex;
+  justify-content:center;
+  align-items: center;  
+}
+.kakao_box h4,.tel_box h4{
+  color:#ffffff;
+}
+.kakao_box,.notice_box img{
+  margin-right:10px;
+}
+.notice_box>li:last-child{
+  width:100%;
+  border-top:1px solid rgba(0,0,0,0.2);
+  padding-top:20px;
+}
+h4{
+  font-size:1.4em;
+}
+.notice_box>li:last-child>ul>li{
+  list-style:disc inside;
+  margin:6px 0;
+}
+.notice_box>li:last-child>ul>li>a:hover{
+  text-decoration:underline;
+}
+footer{
+  margin:50px 0 40px;
+  border-top:1px solid rgba(0,0,0,0.2);
+  padding-top:30px;
+}
+h5>span>a{font-size:1.2em;display:inline-block;}
+.right_border{
+  margin:1em 1em 1em 0;
+  border-right:1px solid rgba(0,0,0,0.2);
+  padding-right:1em;
+}
+footer li{
+  width:100%;
+  margin-bottom:40px;
+}
+footer li:last-child{
+  text-align:center;
+}
+footer li:last-child>a{
+  margin-right:2em;
+}
+footer li:last-child>a:last-child{
+  margin-right:0;
+}
 
 
 
@@ -341,7 +409,7 @@ header{
     width:25%;
     border:none !important;
     justify-content:flex-end;
-    padding-bottom:32px;
+    padding-bottom:34px;
   }
   .main_nav>li::before{
     display:none;
@@ -377,6 +445,57 @@ header{
   }
   .mo_banner{display:none;}
   .tab_banner{display:block;}
+
+  .topplace h2{
+    height:150px;
+    padding:60px 0;
+    font-size:2.4em;
+  }
+  .topplace h2 span{display:inline;}
+  .top3>li{margin-right:2%;}
+  .top3>li:last-child{margin-right:0;}
+
+  .top3>li>h3{
+    padding-top:16px;
+    font-size:1.4em;
+    text-align:center;
+  }
+  .top3>li>p{
+    text-align:center;
+  }
+  .top3>li>p>a{
+    display:inline-block;
+    margin:20px 0;
+    border-top:1px solid #000000;
+    padding-top:6px;
+    font-size:1.2em;
+  }
+  .notice{
+    margin-top:30px;
+    padding:60px 0;
+    background-color:#f4f0e9;
+  }
+  .notice_box>li:last-child{
+    width:30.24390243902439%;
+    border-top:none;
+  }
+  h4{
+    font-size:1.8em;
+  }
+  .notice_box>li:first-child{
+    display:flex;
+  }
+  footer{
+    margin:0;
+  }
+  footer li:first-child{
+    width:60%;
+  }
+  footer li:last-child{
+    width:40%;
+    padding-top:50px;
+  }
+  
 }
 
 
@@ -429,6 +548,7 @@ header{
     border-radius:0;
     padding:10px 0;
     background-color:#ffffff;
+    opacity:1;
   }
   .pos_fix>p::before,
   .pos_fix>p>a{color:#282828;}

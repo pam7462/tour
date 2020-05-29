@@ -2,6 +2,7 @@ $(function(){
 
   fnKakao();
   fnmainNav();
+  gridSystem();
 
   // 스킵메뉴
   $('.skip>a').focus(function(){
@@ -61,10 +62,31 @@ $(function(){
   $(window).scroll(function(){
     var winTop=$(window).scrollTop();
     var winWidth=$(window).width();
+    // 모바일 scrolltop 200이상 조건
     if(winTop>=200 && winWidth<=1065){
-      $('.pos_fix>p').css('opacity',0.5);
-    }else if(){
-      $('.pos_fix>p').css('opacity',0);
+      $('.pos_fix>p').css('display','flex');
+      // 모바일  scrolltop 200미만 조건
+    }else if(winTop<200 && winWidth<=1065){
+      $('.pos_fix>p').css('display','none');
+      // PC  scrolltop 200이상 조건
+    }else if(winTop>=200 && winWidth>=1066){
+      $('.pos_fix>ul').css('display','block');
+      $('.pos_fix>p').css('display','flex');
+      // PC  scrolltop 200미만 조건
+    }else if(winTop<200 && winWidth>=1066){
+      $('.pos_fix>ul').css('display','none');
+      $('.pos_fix>p').css('display','none');
+    }    
+  });
+
+  // 윈도우 리사이즈 이벤트
+  $(window).resize(function(){
+    gridSystem();
+    var winWidth=$(window).width();
+    if(winWidth<=800){
+      $('.pos_fix>ul').css('display','block');
+    }else if(winWidth<=1065){
+      $('.pos_fix>ul').css('display','none');
     }
   });
 
@@ -72,4 +94,15 @@ $(function(){
   var scroll = new SmoothScroll('a[data-scroll]', {
     speed:300
   });
+
+  // 화면폭에 따른 그리드 적용
+  function gridSystem(){
+    var winWidth=$(window).width();
+    if(winWidth<=800){
+      // 모바일영역
+      $('.top3>li').removeClass('pc_g4');
+    }else{
+      $('.top3>li'). addClass('pc_g4');
+    }
+  }
 })
