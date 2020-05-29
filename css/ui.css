@@ -101,7 +101,8 @@ body{font-family: 'Noto Sans KR', sans-serif;}
   flex-flow:column nowrap;
   justify-content:center;
   align-items: center;
-  opacity:0.5;
+  opacity:0;
+  transition:0.2s;
 }
 .pos_fix>p::before{
   content:'^';
@@ -251,19 +252,12 @@ header{
 .tab_banner .swiper-pagination-bullet-active{
   width:42px;
 }
-.tab_banner .swiper-pagination::before{
-  content:'';
-  display:inline-block;
+.tab_banner .stop{
   width:14px;
   height:14px;
-  background-color:red;
-}
-.tab_banner .swiper-pagination::after{
-  content:'';
-  display:inline-block;
-  width:14px;
-  height:14px;
-  background-color:green;
+  background-image:url('../images/stop.png');
+  background-size:cover;
+  cursor: pointer;
 }
 
 
@@ -404,7 +398,6 @@ header{
     transform:translateY(50%);
   }
   .pos_fix>ul{
-    display:block;
     width:94px;
     padding:0;
     position: static;

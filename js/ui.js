@@ -54,4 +54,22 @@ $(function(){
       type: 'bullets',
     },
   });
+
+  // 슬라이더 멈춤/재생 이벤트
+
+  // 스크롤 이벤트
+  $(window).scroll(function(){
+    var winTop=$(window).scrollTop();
+    var winWidth=$(window).width();
+    if(winTop>=200 && winWidth<=1065){
+      $('.pos_fix>p').css('opacity',0.5);
+    }else if(){
+      $('.pos_fix>p').css('opacity',0);
+    }
+  });
+
+  // 스무스 스크롤
+  var scroll = new SmoothScroll('a[data-scroll]', {
+    speed:300
+  });
 })
